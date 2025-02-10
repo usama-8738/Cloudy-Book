@@ -136,5 +136,3 @@ For questions or feedback, feel free to reach out:
 Check out the live demo of **Cloudy Book**: [https://cloudy-book-demo.example.com](https://cloudy-book-demo.example.com)
 
 ---
-
-This README provides a clean, professional, and visually appealing structure while including all the essential information about your project. You can customize placeholders like screenshots, links, and contact details to match your actual project. Let me know if you need further adjustments! 😊
