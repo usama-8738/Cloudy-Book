@@ -7,7 +7,7 @@ const User = require("../models/User");
 const authenticateToken = require("../middleware/auth");
 const router = express.Router();
 
-const JWT_SECRET = "352eee";
+const JWT_SECRET = process.env.REACT_APP_JWT_SECRET;
 const senderEmail = process.env.REACT_APP_EMAIL;
 const senderPassword = process.env.REACT_APP_PASSWORD;
 

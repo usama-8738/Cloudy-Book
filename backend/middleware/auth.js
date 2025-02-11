@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const JWT_SECRET = "352eee"; // Same secret key used earlier
+const JWT_SECRET = process.env.REACT_APP_JWT_SECRET; // Same secret key used earlier
 
 const authenticateToken = (req, res, next) => {
   const token = req.header("Authorization")?.replace("Bearer ", "");
