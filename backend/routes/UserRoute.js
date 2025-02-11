@@ -7,9 +7,9 @@ const User = require("../models/User");
 const authenticateToken = require("../middleware/auth");
 const router = express.Router();
 
-const JWT_SECRET = process.env.REACT_APP_JWT_SECRET;
-const senderEmail = process.env.REACT_APP_EMAIL;
-const senderPassword = process.env.REACT_APP_PASSWORD;
+const JWT_SECRET = process.env.JWT_SECRET;
+const senderEmail = process.env.SENDER_EMAIL;
+const senderPassword = process.env.SENDER_PASSWORD;
 
 // Helper function to generate verification code
 const generateVerificationCode = () => {

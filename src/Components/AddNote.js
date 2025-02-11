@@ -17,10 +17,10 @@ const AddNote = () => {
     const { name, value } = e.target;
     setNote({ ...note, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Call addNote function from context
-    const success = addNote(
+    const success = await addNote(
       note.title,
       note.description,
       note.tag === "" ? "General" : note.tag
@@ -28,7 +28,7 @@ const AddNote = () => {
     // Reset form after submission
     if (success) {
       console.log("Note Added");
-      getNotes();
+      await getNotes();
       setNote({ title: "", description: "", tag: "", status: true });
       setAlert({
         message: "Note added successfully.",
