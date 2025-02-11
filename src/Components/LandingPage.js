@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router";
 import { TypeAnimation } from "react-type-animation";
 
-const LandingPage = () => {
+const LandingPage = ({ isLoggedIn }) => {
   return (
     <div className="relative w-full h-screen">
       <video
@@ -36,20 +36,31 @@ const LandingPage = () => {
             />
           </div>
         </div>
-        <div className="flex space-x-4 mt-10">
-          <NavLink
-            className="px-6 py-3 bg-sky-500 text-white text-lg rounded-md shadow-lg hover:bg-sky-600 transition-all"
-            to="/login"
-          >
-            Sign In
-          </NavLink>
-          <NavLink
-            className="px-6 py-3 bg-sky-500 text-white text-lg rounded-md shadow-lg hover:bg-sky-600 transition-all"
-            to="/signup"
-          >
-            Sign Up
-          </NavLink>
-        </div>
+        {!isLoggedIn ? (
+          <div className="flex space-x-4 mt-10">
+            <NavLink
+              className="px-6 py-3 bg-sky-500 text-white text-lg rounded-md shadow-lg hover:bg-sky-600 transition-all"
+              to="/login"
+            >
+              Sign In
+            </NavLink>
+            <NavLink
+              className="px-6 py-3 bg-sky-500 text-white text-lg rounded-md shadow-lg hover:bg-sky-600 transition-all"
+              to="/signup"
+            >
+              Sign Up
+            </NavLink>
+          </div>
+        ) : (
+          <div className="flex space-x-4 mt-10">
+            <NavLink
+              className="px-6 py-3 bg-sky-500 text-white text-lg rounded-md shadow-lg hover:bg-sky-600 transition-all"
+              to="/"
+            >
+              Go to Dashboard
+            </NavLink>
+          </div>
+        )}
       </div>
     </div>
   );

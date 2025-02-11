@@ -1,4 +1,6 @@
 import React from "react";
+import deleteIcon from "../Assets/delete.png";
+import editIcon from "../Assets/edit.png";
 
 const NoteItem = ({
   title,
@@ -19,26 +21,34 @@ const NoteItem = ({
           <p className="truncate">{description}</p>
           <p className="truncate">Tag: {tag}</p>
           <div className="card-actions gap-3">
-            <i
-              className="fa-regular fa-pen-to-square"
+            <img
+              src={editIcon}
+              alt="Edit"
+              style={{
+                width: "20px",
+                height: "20px",
+                cursor: "pointer",
+                filter: "invert(1)",
+              }}
               onClick={(e) => {
                 e.stopPropagation();
                 handleEditNote();
               }}
-              style={{ color: "green" }}
-            >
-              <span className="sr-only">Edit Note</span>
-            </i>
-            <i
-              className="fa-solid fa-trash"
-              style={{ color: "red" }}
+            />
+            <img
+              src={deleteIcon}
+              alt="Delete"
+              style={{
+                width: "20px",
+                height: "20px",
+                cursor: "pointer",
+                filter: "invert(1)",
+              }}
               onClick={(e) => {
                 e.stopPropagation();
                 handleDeleteNote();
               }}
-            >
-              <span className="sr-only">Delete Note</span>
-            </i>
+            />
           </div>
         </div>
       </div>
