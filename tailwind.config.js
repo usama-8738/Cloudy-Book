@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flyonui/dist/js/*.js",
+    "./node_modules/flyonui/dist/**/*.{js,jsx}"
   ],
   theme: {
     extend: {
