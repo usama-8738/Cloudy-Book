@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flyonui/dist/**/*.{js,jsx}"
+    "./node_modules/flyonui/dist/js/*.js",
   ],
   theme: {
     extend: {
@@ -30,8 +30,8 @@ module.exports = {
       "grey-300": "#e2e8f0",
       "green-100": "#f0fff4",
       "green-800": "#22543d",
-      "sky-500": "rgb(14 165 233/var(--tw-bg-opacity,1))",
-      "sky-600": "rgb(56 179 235);",
+      "sky-500": "#0ea5e9",
+      "sky-600": "#38b3eb",
     },
   },
   plugins: [require("flyonui"), require("flyonui/plugin")],
